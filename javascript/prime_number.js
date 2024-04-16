@@ -4,6 +4,7 @@
  * A prime number is one that is only divisible by 1 and itself.
  */
 const readline = require('readline');
+
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout

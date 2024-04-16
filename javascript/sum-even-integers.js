@@ -3,12 +3,14 @@
  * Write a program that adds all the even integers from 1 to 100 and prints the result.
  */
 
-let result = 0;
+function sumEvenNumbers() {
+  let result = 0;
 
-for (let i = 0; i < 100; i++) {
-  if (i % 2 === 0) {
+  for (let i = 2; i <= 100; i += 2) {
     result += i;
   }
+
+  return result;
 }
 
-console.log(`The addition result is: ${result}`);
+console.log(`The addition result is: ${sumEvenNumbers()}`);

@@ -3,12 +3,16 @@
  * Write a program that adds all the even integers from 1 to 100 and prints the result.
  */
 
-void main() {
+int sunEvenNumber() {
   int result = 0;
-  for (int i = 0; i < 100; i++) {
-    if (i % 2 == 0) {
-      result += i;
-    }
+
+  for (int i = 2; i <= 100; i += 2) {
+    result += i;
   }
-  print('The addition result is: $result');
+
+  return result;
+}
+
+void main() {
+  print('The addition result is: ${sunEvenNumber()}');
 }

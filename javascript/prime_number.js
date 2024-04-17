@@ -25,12 +25,12 @@ function isPrime(num) {
 }
 
 rl.question('Enter a number to check if it is prime or not: ', (answer) => {
-  const number = parseInt(answer);
+  const num = parseInt(answer);
 
   if (isPrime(number)) {
-    console.log(`${number} is prime.`);
+    console.log(`${num} is prime.`);
   } else {
-    console.log(`${number} is not prime.`);
+    console.log(`${num} is not prime.`);
   }
 
   rl.close();

@@ -35,9 +35,9 @@ function fibonacci(num) {
 }
 
 rl.question('Enter a number: ', (answer) => {
-  const number = parseInt(answer);
+  const num = parseInt(answer);
 
-  console.log(fibonacci(number));
+  console.log(fibonacci(num));
 
   rl.close();
 });

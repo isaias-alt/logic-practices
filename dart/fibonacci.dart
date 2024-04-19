@@ -6,13 +6,13 @@
  */
 import 'dart:io';
 
-List<int> fibonacci(int num) {
+String fibonacci(int num) {
   if (num <= 0) {
     print('Please enter a positive integer');
-    return [];
+    return '[]';
   }
 
-  if (num == 1) return [0];
+  if (num == 1) return '[0]';
 
   List<int> res = [0, 1];
 
@@ -21,16 +21,18 @@ List<int> fibonacci(int num) {
     res.add(nextFib);
   }
 
-  return res;
+  String fib = '(${res.join(', ')})';
+
+  return fib;
 }
 
 void main() {
   stdout.write('Enter a number: ');
   int num = int.parse(stdin.readLineSync()!);
 
-  List<int> fibonacciSequence = fibonacci(num);
+  String fibonacciSequence = fibonacci(num);
 
   if (fibonacciSequence.isNotEmpty) {
-    print(fibonacci(num).toString().replaceAll('[', '(').replaceAll(']', ')'));
+    print(fibonacci(num));
   }
 }

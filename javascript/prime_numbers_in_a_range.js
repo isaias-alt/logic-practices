@@ -13,14 +13,21 @@ const rl = readline.createInterface({
 
 function isPrime(num) {
   if (num <= 1) return false;
-  for (let i = 2; i <= Math.sqrt(num); i++) {
+  if (num === 2) return false;
+  if (num % 2 === 0) return false;
+
+  for (let i = 3; i <= Math.sqrt(num); i += 2) {
     if (num % i === 0) return false;
   }
   return true;
 }
 
 function printPrimeInARange(n, m) {
+  if (n >= m) return 'Invalid input: n must be less than m.';
+  if (n < 1 || m < 1) return 'Invalid Number. Please enter a positive integer n (where n < m)';
+
   const res = [];
+
   for (let i = n; i <= m; i++) {
     if (isPrime(i)) {
       res.push(i);
@@ -34,12 +41,8 @@ rl.question('Enter a positive integer n (where n < m): ', (answerOne) => {
     const n = parseInt(answerOne);
     const m = parseInt(answerTwo);
 
-    if (n < 1 || m < 1 || n >= m) {
-      console.log('Invalid Number. Please enter a positive integer n (where n < m)');
-    } else {
-      console.log(`Prime numbers in range ${n} to ${m} are: `);
-      printPrimeInARange(n, m);
-    }
+    console.log(`Prime numbers in range ${n} to ${m} are: `);
+    printPrimeInARange(n, m);
 
     rl.close();
 

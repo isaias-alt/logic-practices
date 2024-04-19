@@ -19,6 +19,7 @@ bool isPrime(int num) {
 
 String printPrimeInARange(int n, int m) {
   if (n >= m) return 'Invalid input: n must be less than m.';
+  if (n < 1 || m < 1) return 'Invalid Number. Please enter a positive integer.';
 
   List<int> res = [];
 

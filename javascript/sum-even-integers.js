@@ -1,6 +1,6 @@
 /**
- * Ejercicio 1: Suma de enteros pares
- * Escribe un programa que sume todos los números enteros pares del 1 al 100 e imprima el resultado.
+ * Exercise 1: Addition of even integers
+ * Write a program that adds all the even integers from 1 to 100 and prints the result.
  */
 
 function sumEvenNumbers() {
@@ -13,4 +13,4 @@ function sumEvenNumbers() {
   return result;
 }
 
-console.log(`El resultado de la adición es: ${sumEvenNumbers()}`);
+console.log(`The addition result is: ${sumEvenNumbers()}`);

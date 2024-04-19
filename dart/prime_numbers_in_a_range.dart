@@ -8,14 +8,20 @@ import 'dart:math' as Math;
 
 bool isPrime(int num) {
   if (num <= 1) return false;
-  for (int i = 2; i <= Math.sqrt(num); i++) {
+  if (num == 2) return false;
+  if (num % 2 == 0) return false;
+
+  for (int i = 3; i <= Math.sqrt(num).toInt(); i += 2) {
     if (num % i == 0) return false;
   }
   return true;
 }
 
 String printPrimeInARange(int n, int m) {
+  if (n >= m) return 'Invalid input: n must be less than m.';
+
   List<int> res = [];
+
   for (int i = n; i <= m; i++) {
     if (isPrime(i)) {
       res.add(i);
@@ -23,7 +29,6 @@ String printPrimeInARange(int n, int m) {
   }
 
   String result = '(${res.join(', ')})';
-
   return result;
 }
 
@@ -34,10 +39,6 @@ void main() {
   stdout.write('Enter a positive integer m (where n < m): ');
   int m = int.parse(stdin.readLineSync()!);
 
-  if (n < 1 || m < 1 || n >= m) {
-    print('Invalid Number. Please enter a positive integer n (where n < m)');
-  } else {
-    print('Prime numbers in range $n to $m are: ');
-    print(printPrimeInARange(n, m));
-  }
+  print('Prime numbers in range $n to $m are: ');
+  print(printPrimeInARange(n, m));
 }

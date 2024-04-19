@@ -1,6 +1,6 @@
 /**
- * Exercise 1: Addition of even integers
- * Write a program that adds all the even integers from 1 to 100 and prints the result.
+ * Ejercicio 1: Suma de enteros pares
+ * Escribe un programa que sume todos los números enteros pares del 1 al 100 e imprima el resultado.
  */
 
 int sunEvenNumber() {
@@ -14,5 +14,5 @@ int sunEvenNumber() {
 }
 
 void main() {
-  print('The addition result is: ${sunEvenNumber()}');
+  print('El resultado de la adición es: ${sunEvenNumber()}');
 }

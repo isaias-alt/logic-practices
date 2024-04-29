@@ -1,8 +1,3 @@
-/**
- * Exercise 2: Prime numbers
- * Write a program that prompts the user for a positive integer greater than 1 and determines whether that number is prime or not. 
- * A prime number is one that is only divisible by 1 and itself.
- */
 const readline = require('readline');
 
 const rl = readline.createInterface({

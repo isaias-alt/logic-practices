@@ -1,0 +1,4 @@
+Fibonacci Numbers
+Write a program that prompts the user for a positive integer and then prints the first n terms of the Fibonacci sequence, 
+where n is the number entered by the user. The Fibonacci sequence starts with 0 and 1, and each next term is the sum of the previous two 
+(0, 1, 1, 2, 3, 5, 8, ...).

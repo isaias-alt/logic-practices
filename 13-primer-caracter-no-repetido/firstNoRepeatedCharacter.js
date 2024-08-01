@@ -19,5 +19,6 @@ function firstNoRepeatedCharacter (str) {
   return -1
 }
 
+const str = 'swiss'
 
-console.log(firstNoRepeatedCharacter('swiss'))
+console.log(firstNoRepeatedCharacter(str))

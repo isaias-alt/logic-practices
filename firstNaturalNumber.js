@@ -2,7 +2,7 @@
  * Escribe una función que reciba un número n y devuelva la suma de todos los números naturales desde 1 hasta n. 
  * Por ejemplo, si n = 5, la función debe devolver 15 porque 1 + 2 + 3 + 4 + 5 = 15.
  * 
- * input: n = 5
+ * Input: n = 5
  * Output: 15
  * Input: n = 10
  * Output: 55

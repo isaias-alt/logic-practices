@@ -13,3 +13,14 @@
  * - El array contiene exactamente n-1 números.
  * - Trata de pensar en la eficiencia de tu solución, especialmente para arrays grandes.
 */
+
+function findMissingNumber(array) {
+  const n = array.length + 1;
+  const totalSum = ( n * ( n + 1 ) ) / 2;
+  const currentSum = array.reduce((acc, curr) => acc + curr, 0);
+  const result = totalSum - currentSum;
+  return result;
+}
+
+const array = [3, 7, 1, 2, 8, 4, 5];
+console.log(findMissingNumber(array));
